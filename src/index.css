@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+.inner-colored-blur {
+  position: relative;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.08); /* light transparent */
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    inset 0 0 25px rgba(255, 140, 50, 0.35),   /* orange blur inside */
+    inset 0 0 45px rgba(255, 140, 50, 0.15),   /* wider soft glow */
+    inset 0 0 12px rgba(255, 255, 255, 0.25);  /* white soft shine */
+  
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
