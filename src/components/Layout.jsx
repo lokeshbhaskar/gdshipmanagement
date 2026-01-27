@@ -12,7 +12,6 @@ const Layout = () => {
       <Navbar />
       <Suspense fallback={<div>Loading...</div>}>
             <Outlet />
-
       </Suspense>
       <Banner/>
       <Footer />

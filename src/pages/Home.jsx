@@ -7,7 +7,6 @@ const Benefits = lazy(() => import("../components/home/Benefits"));
 import ContactComponent from '../components/ContactComponent'
 
 const Home = () => {
-
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const scrollToAbout = () => {

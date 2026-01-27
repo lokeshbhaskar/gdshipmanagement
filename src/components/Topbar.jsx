@@ -29,7 +29,7 @@ const TopBar = () => {
   return (
     <div
       className={`
-        fixed left-0 w-full z-[60]
+        fixed left-0 w-full z-60
         bg-black/40 backdrop-blur-lg
         border-b border-white/10 text-white
         transition-all duration-300 ease-out
@@ -39,7 +39,7 @@ const TopBar = () => {
       <div
         className="
           max-w-7xl mx-auto px-4
-          py-[6px] text-[11px] md:text-[13px]
+          py-1.5 text-[11px] md:text-[13px]
           flex flex-col md:flex-row md:items-center md:justify-between
           gap-1 md:gap-0
         "
@@ -56,16 +56,14 @@ const TopBar = () => {
             </div>
           </div>
 
-          {/* Email 1 */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer">
             <HiOutlineMail className="text-lg text-white/90" />
-            <span>gdshipmanagement2022@gmail.com</span>
-          </div>
-
-          {/* Email 2 */}
-          <div className="flex items-center gap-2">
-            <HiOutlineMail className="text-lg text-white/90" />
-            <span>crewing@gdship.com</span>
+            <a
+              href="mailto:gdshipmanagement2022@gmail.com"
+              className="hover:underline text-white/90"
+            >
+              gdshipmanagement2022@gmail.com
+            </a>
           </div>
         </div>
 
