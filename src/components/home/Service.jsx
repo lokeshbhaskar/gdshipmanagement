@@ -45,17 +45,17 @@ const Service = () => {
       </div>
 
       {/* UI dashes */}
-      <div className="hidden  md:grid grid-cols-2 md:grid-cols-4 gap-4 p-4 max-w-[1200px] mx-auto">
+      <div className="hidden  md:grid grid-cols-2 md:grid-cols-4 gap-4 p-4 max-w-300 mx-auto">
         <div className="h-40 shadow-md border border-gray-700 rounded-2xl"></div>
-        <div className="h-[260px] shadow-md border border-gray-700 rounded-2xl"></div>
-        <div className="h-[120px] shadow-md border border-gray-700 rounded-2xl"></div>
-        <div className="h-[180px] shadow-md border border-gray-700 rounded-2xl"></div>
+        <div className="h-65 shadow-md border border-gray-700 rounded-2xl"></div>
+        <div className="h-30 shadow-md border border-gray-700 rounded-2xl"></div>
+        <div className="h-45 shadow-md border border-gray-700 rounded-2xl"></div>
       </div>
 
       <div className="p-5 md:p-13 space-y-20 space-x-5 w-full lg:flex">
 
         {/* ===== SECTION 1 ===== */}
-        <div className="relative min-h-[360px] md:min-h-[420px] w-full">
+        <div className="relative min-h-90 md:min-h-105 w-full">
 
           {/* ------- SERVICE CARD 1 (LEFT TOP) ------- */}
           <div
@@ -78,8 +78,7 @@ const Service = () => {
             </h3>
 
             <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Navtex Marine Services provides commercial management solutions for a wide array of vessels, with services including...            </p>
-
+              Gd Ship Management Marine Services provides commercial management solutions for a wide array of vessels, with services including...            </p>
             <button className="mt-1 text-[13px] sm:text-sm font-medium text-blue-700 hover:underline">
               Read More →
             </button>
@@ -119,7 +118,7 @@ const Service = () => {
         </div>
 
         {/* ===== SECTION 2 ===== */}
-        <div className="relative min-h-[360px] md:min-h-[420px] w-full">
+        <div className="relative min-h-90 md:min-h-105 w-full">
 
           {/* ------- SERVICE CARD 3 (RIGHT TOP) ------- */}
           <motion.div
@@ -144,7 +143,7 @@ const Service = () => {
             </h3>
 
             <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Navtex Marine Services provides crew management services to help our clients be more efficient and effective in their operations.            </p>
+              About Gd Ship Management Services provides crew management services to help our clients be more efficient and effective in their operations.            </p>
 
             <button className=" text-[12px] sm:text-sm font-medium text-gray-900 hover:underline relative left-30 md:left-60">
               Read More →

@@ -1,11 +1,11 @@
-import React,{forwardRef} from 'react';
+import React, { forwardRef } from 'react';
 import { HiChevronDoubleRight } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
 
 const AboutUs = forwardRef((props, ref) => {
     const rows = 5; // number of rows
     const cols = 5; // number of columns
-const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
         <div ref={ref} className="relative w-full">
 
@@ -13,7 +13,7 @@ const navigate = useNavigate();
             <div className="w-full text-center -mt-5 md:-mt-10 lg:-mt-12 relative z-20 px-4">
                 <h1 className="text-[20px] md:text-5xl lg:text-7xl xl:text-8xl font-semibold 
                        lg:text-[#1A334E] text-[#67873B] drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] blur-[0.3px]">
-                    About NavTex Marine Pvt Ltd
+                    About Gd Ship Management Pvt Ltd
                 </h1>
             </div>
 
@@ -31,7 +31,7 @@ const navigate = useNavigate();
                     <div className="w-full lg:w-1/2 bg-white/95 p-8 md:p-12 rounded-3xl shadow-xl relative z-20 flex flex-col justify-start">
                         <h2 className="text-2xl md:text-4xl font-bold mb-5 text-[#1A334E]">Who We Are</h2>
                         <p className="text-gray-700 text-xs md:text-[16px] lg:text-[13px] xl:text-[16px] leading-relaxed mb-5">
-We have recently expanded our services to include training and document issuance, while continuing to uphold our core commitment to quality management. We provide reliable and flexible management services to the global shipping industry, supported by strong expertise and experience. We focus on building long-term partnerships with our clients by delivering professional and efficient solutions tailored to their specific business needs. </p>
+                            We have recently expanded our services to include training and document issuance, while continuing to uphold our core commitment to quality management. We provide reliable and flexible management services to the global shipping industry, supported by strong expertise and experience. We focus on building long-term partnerships with our clients by delivering professional and efficient solutions tailored to their specific business needs. </p>
                         {/* Diagonal accent line */}
                         <div className="absolute left-0 bottom-0 w-2/3 h-1 bg-[#1A334E] skew-x-12 rounded-lg"></div>
 
@@ -41,7 +41,7 @@ We have recently expanded our services to include training and document issuance
 
                         {/* button */}
                         <div className='cursor-pointer flex gap-3 items-center justify-center bg-[#1A334E] text-xl text-white mt-5 font-semibold hover:bg-transparent hover:border-2 border-[#1A334E] hover:text-[#1A334E] w-40 py-4'>
-                            <button className='cursor-pointer' onClick={()=>navigate("/about")}>
+                            <button className='cursor-pointer' onClick={() => navigate("/about")}>
                                 Read More
                             </button>
                             <HiChevronDoubleRight />

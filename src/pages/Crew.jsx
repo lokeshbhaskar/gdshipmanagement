@@ -83,11 +83,9 @@ const Crew = () => {
 
           <div className="flex flex-col gap-10">
             <p className="text-gray-700 md:text-lg leading-relaxed">
-              Navtex Marine Services provides crew management services to help our clients be more efficient and effective in their operations. We have the relevant resources, systems and experience to provide solutions to the highest standards.</p>
-            <p>Our core focus is to have well trained and authentic staff that can actually take care of the vessel apart from performing necessary duties. Navtex Marine Services has plans to start training Centres in India so as to substantiate this claim.</p>
+              Gd Ship Management Marine Services provides crew management services to help our clients be more efficient and effective in their operations. We have the relevant resources, systems and experience to provide solutions to the highest standards.</p>
+            <p>Our core focus is to have well trained and authentic staff that can actually take care of the vessel apart from performing necessary duties. Gd Ship Management Services has plans to start training Centres in India so as to substantiate this claim.</p>
           </div>
-
-
         </div>
       </div>
 
