@@ -10,8 +10,6 @@ const HeroSection = ({ scrollToAbout, scrollToContact }) => {
         height: "100dvh",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, black 100%, transparent 100%)",
       }}
     >
       {/* Dark overlay for better text visibility */}

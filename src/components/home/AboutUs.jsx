@@ -9,9 +9,9 @@ const AboutUs = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="relative w-full">
       {/* HEADING */}
-      <div className="w-full text-center -mt-2 md:-mt-4 lg:-mt-12 relative z-20 px-4">
+      <div className="w-full text-center md:-mt-4 lg:-mt-6 relative z-20 px-4">
         <h1
-          className="mt-2 lg:mt-14 text-[50px] md:text-5xl lg:text-7xl xl:text-8xl font-semibold 
+          className="mt-4 lg:mt-12 text-[50px] md:text-5xl lg:text-7xl xl:text-8xl font-semibold 
                        lg:text-[#1A334E] text-[#1A334E]"
         >
           ABOUT US
