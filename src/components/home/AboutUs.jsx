@@ -19,7 +19,7 @@ const AboutUs = forwardRef((props, ref) => {
       </div>
 
       {/* MAIN SECTION */}
-      <div className="p-4 mt-4 md:p-10 xl:px-30">
+      <div className="p-4 mt-5 md:p-10 xl:px-30">
         <div
           className="relative xl:h-[75vh] rounded-3xl border-2 border-gray-300 overflow-hidden shadow-2xl flex flex-col lg:flex-row "
           style={{

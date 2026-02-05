@@ -56,7 +56,7 @@ const StatCard = ({ icon, percentage, type, startAnimation }) => {
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
       className="relative bg-linear-to-br from-gray-900/60 to-gray-700/20 
                  backdrop-blur-xl border border-white/10
-                 rounded-3xl p-6 shadow-2xl w-full h-[260px]
+                 rounded-3xl p-6 shadow-2xl w-full h-65
                  flex flex-col justify-between z-20"
     >
       <div className="text-gray-300 mb-2">{icon}</div>
@@ -133,7 +133,7 @@ export default function StatsSection() {
 
       >
         {/* POWERFUL SUNLIGHT BEAM */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[700px] z-10 pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-100 h-175 z-10 pointer-events-none">
           <div
             className="absolute inset-0 w-full h-full"
             style={{
