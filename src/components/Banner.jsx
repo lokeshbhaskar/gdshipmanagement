@@ -33,7 +33,7 @@ const Banner = () => {
 
                 {/* contact us buton */}
                 <p className="font-serif text-sm md:text-xl text-white">
-                    A genuine strategic partner is Navtex Marine Services Pvt Ltd. You can
+                    A genuine strategic partner is GD SHIP MANAGEMENT Pvt Ltd. You can
                     get the full range of end-to-end solutions you need to run your business
                     effectively and efficiently through our global network. Investigate our
                     administration proposing to find more.
