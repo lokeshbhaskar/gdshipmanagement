@@ -21,13 +21,9 @@ const Banner = () => {
         "
                 style={{
                     backgroundImage: "url('/banner.jpg')",
-                    WebkitMaskImage:
-                        "linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)",
-                    maskImage:
-                        "linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)",
                 }}
             >
-                <h2 className="text-[#1c4905] md:text-3xl font-semibold lg:p-10">
+                <h2 className="text-[#ffffff] md:text-3xl font-semibold lg:p-10">
                     Marine Services Are Often Considered
                 </h2>
 
