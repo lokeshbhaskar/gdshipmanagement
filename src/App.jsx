@@ -1,4 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
+import { ToastContainer} from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 import './App.css'
 import Layout from './components/Layout'
@@ -29,6 +31,15 @@ function App() {
           <Route path='/contact' element={<Contact />} />
         </Route>
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="light"
+      />
     </>
   )
 }
