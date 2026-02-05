@@ -10,8 +10,6 @@ const cardAnimation = {
 const Service = () => {
   return (
     <div className="w-full relative py-20 flex flex-col items-end pr-3 md:pr-10">
-
-      {/* RIGHT-ALIGNED FLOATING TRANSPARENT SLAB WITH ANIMATION */}
       <motion.div
         initial={{ x: 200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -26,38 +24,24 @@ const Service = () => {
           shadow-[-35px_15px_50px_rgba(0,0,0,0.45)]
         "
       ></motion.div>
-
-      {/* STAIRS HEADING */}
       <div
         className="
-          absolute top-0 left-1/2 -translate-x-1/2
-          md:left-10 md:translate-x-0
-          text-center md:text-left
-        "
-      >
+          absolute top-0 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 text-center md:text-left">
         <h1 className="text-4xl sm:text-6xl md:text-8xl xl:text-[14rem] text-gray-400 leading-none">
           Our Services
         </h1>
-
         <h2 className="text-md sm:text-xl md:text-3xl font-semibold text-gray-700">
           Provides A Reliable Services
         </h2>
       </div>
-
-      {/* UI dashes */}
       <div className="hidden  md:grid grid-cols-2 md:grid-cols-4 gap-4 p-4 max-w-300 mx-auto">
         <div className="h-40 shadow-md border border-gray-700 rounded-2xl"></div>
         <div className="h-65 shadow-md border border-gray-700 rounded-2xl"></div>
         <div className="h-30 shadow-md border border-gray-700 rounded-2xl"></div>
         <div className="h-45 shadow-md border border-gray-700 rounded-2xl"></div>
       </div>
-
       <div className="p-5 md:p-13 space-y-20 space-x-5 w-full lg:flex">
-
-        {/* ===== SECTION 1 ===== */}
         <div className="relative min-h-90 md:min-h-105 w-full">
-
-          {/* ------- SERVICE CARD 1 (LEFT TOP) ------- */}
           <div
             className="
               absolute top-10 md:top-0 left-0 
@@ -83,8 +67,6 @@ const Service = () => {
               Read More →
             </button>
           </div>
-
-          {/* ------- SERVICE CARD 2 (RIGHT BOTTOM) ------- */}
           <motion.div
             {...cardAnimation}
             viewport={{ amount: 0.2 }}
@@ -108,19 +90,14 @@ const Service = () => {
             </h3>
 
             <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Our Technical Management include maintenance and repair, inspection, testing and calibration, as well as....            </p>
+              Our Technical Management include maintenance and repair, inspection, testing and calibration, as well as....</p>
 
             <button className="mt-3 text-[13px] sm:text-sm font-medium text-white hover:underline">
               Read More →
             </button>
           </motion.div>
-
         </div>
-
-        {/* ===== SECTION 2 ===== */}
         <div className="relative min-h-90 md:min-h-105 w-full">
-
-          {/* ------- SERVICE CARD 3 (RIGHT TOP) ------- */}
           <motion.div
             {...cardAnimation}
             viewport={{ amount: 0.2 }}
@@ -149,8 +126,6 @@ const Service = () => {
               Read More →
             </button>
           </motion.div>
-
-          {/* ------- SERVICE CARD 4 (LEFT BOTTOM) ------- */}
           <motion.div
             {...cardAnimation}
             viewport={{ amount: 0.2 }}

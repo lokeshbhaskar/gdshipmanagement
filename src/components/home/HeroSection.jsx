@@ -4,14 +4,12 @@ import Button from "./Button";
 const HeroSection = ({ scrollToAbout, scrollToContact }) => {
   return (
     <div
-      className="w-full -mt-5 bg-cover bg-center bg-no-repeat relative"
+      className="w-full bg-cover bg-center bg-no-repeat relative"
       style={{
         backgroundImage: "url('/heroSectionShip.png')",
         height: "100dvh",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, black 95%, transparent 100%)",
       }}
     >
       {/* Dark overlay for better text visibility */}
@@ -22,7 +20,7 @@ const HeroSection = ({ scrollToAbout, scrollToContact }) => {
         <div className="mt-4 lg:mt-4 water-bubble md:p-10 ">
           <h1
             className="
-              text-white text-5xl md:text-[11rem] lg:text-[5rem] xl:text-[12rem] font-semibold
+              text-white text-5xl md:text-[11rem] lg:text-[5rem] xl:text-[8rem] font-semibold
               animate-fade-up opacity-0
               drop-shadow-[2px_2px_6px_rgba(0,0,0,0.7)]
             "
