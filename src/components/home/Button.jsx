@@ -3,7 +3,7 @@ import { HiChevronDoubleRight } from "react-icons/hi";
 
 const Button = ({ onAboutClick, onContactClick  }) => {
   return (
-    <div className="flex justify-center mt-10">
+    <div className="flex justify-center mt-30 md:mt-10 lg:mt-10">
       <div className="flex relative">
 
         {/* About Us (left) */}
@@ -11,7 +11,7 @@ const Button = ({ onAboutClick, onContactClick  }) => {
           onClick={onAboutClick}
           className="
             bg-white text-gray-700 
-            px-5 py-2.5 md:px-7 md:py-4 lg:px-7 lg:py-3
+            px-6 py-3 md:px-7 md:py-4 lg:px-7 lg:py-3
             xl:py-4
             text-md  lg:text-[18px]
             rounded-l-full rounded-r-md   

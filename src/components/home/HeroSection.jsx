@@ -8,16 +8,18 @@ const HeroSection = ({ scrollToAbout, scrollToContact }) => {
       style={{
         backgroundImage: "url('/heroSectionShip.png')",
         height: "100dvh",
-        backgroundSize: "100% 100%",
-        WebkitMaskImage: "linear-gradient(to bottom, black 95%, transparent 100%)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        WebkitMaskImage:
+          "linear-gradient(to bottom, black 95%, transparent 100%)",
       }}
     >
       {/* Dark overlay for better text visibility */}
       <div className="absolute inset-0 bg-black/30"></div>
 
-      <div className="relative pt-[120px] text-center z-10">
+      <div className="relative pt-35 text-center z-10">
         {/* Bubble Title */}
-        <div className="lg:-mt-[-1rem] water-bubble md:p-10">
+        <div className="mt-4 lg:mt-4 water-bubble md:p-10 ">
           <h1
             className="
               text-white text-5xl md:text-[11rem] lg:text-[5rem] xl:text-[12rem] font-semibold
@@ -31,7 +33,7 @@ const HeroSection = ({ scrollToAbout, scrollToContact }) => {
         </div>
 
         {/* NEW HEADING + DESCRIPTION */}
-        <div className="mt-2 lg:mt-0 xl:mt-4 max-w-4xl mx-auto">
+        <div className="mt-6 lg:mt-0 xl:mt-4 max-w-4xl mx-auto">
           <h2
             className="
               text-white text-lg md:text-3xl lg:text-2xl xl:text-4xl font-semibold
@@ -40,19 +42,19 @@ const HeroSection = ({ scrollToAbout, scrollToContact }) => {
             "
             style={{ animationDelay: "300ms" }}
           >
-            Navigating the Future of Maritime Excellence
+            SO 9001-2015 Certified Ship Management Excellence
           </h2>
 
           <p
             className="
-              text-white text-xs md:text-lg mt-2
+              text-white text-xl md:text-lg mt-5 lg:mt-2
               animate-fade-up opacity-0
               drop-shadow-[1px_1px_4px_rgba(0,0,0,0.7)]
             "
             style={{ animationDelay: "600ms" }}
           >
-            We are headed by a team of senior shipping professionals with vast experience,
-            knowledge and skills gathered through many years of service in the shipping industry.
+            Government-approved maritime solutions delivering efficient vessel
+            operations and comprehensive crew management services worldwide.
           </p>
         </div>
 
@@ -60,7 +62,7 @@ const HeroSection = ({ scrollToAbout, scrollToContact }) => {
         <Button onAboutClick={scrollToAbout} onContactClick={scrollToContact} />
 
         {/* Bottom content boxes */}
-        <div className="relative bottom-10 xl:mt-8">
+        <div className="relative bottom-6 xl:mt-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-5 xl:gap-35 relative top-20">
             {/* Boxes remain unchanged, text can also get text-shadow */}
           </div>

@@ -18,7 +18,6 @@ const TopBar = () => {
       } else {
         setVisible(true); // Scrolling up → show
       }
-
       setLastScroll(current);
     };
 
