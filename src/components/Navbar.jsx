@@ -19,19 +19,7 @@ const Navbar = () => {
   const [showTopbar, setShowTopbar] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Hide topbar on scroll down, show on scroll up
-  // useEffect(() => {
-  //   let lastScroll = 0;
-  //   const handleScroll = () => {
-  //     const current = window.scrollY;
-  //     setShowTopbar(current < lastScroll || current < 50);
-  //     lastScroll = current <= 0 ? 0 : current;
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
-  // Hide topbar on mobile screens (< 768px)
+ 
   useEffect(() => {
     let timeoutId;
     const handleResize = () => {
@@ -96,7 +84,7 @@ const Navbar = () => {
                 href="mailto:gdshipmanagement2022@gmail.com"
                 className="hover:underline text-white"
               >
-                gdshipmanagement2022@gmail.com
+                info@gdshipmanagement.in
               </a>
             </div>
 
@@ -112,19 +100,19 @@ const Navbar = () => {
 
       {/* MAIN NAVBAR */}
       <div
-        className={`fixed left-1/2 -translate-x-1/2 z-40 w-[90%] transition-all  duration-500 lg:w-[80%] bg-white/35 backdrop-blur-lg border border-white/30 rounded-lg shadow-md flex justify-between items-center px-6 text-[#1A334E] font-semibold  ${isMobile ? "h-15" : "h-20"} ${showTopbar ? "top-16" : "top-4"}`}
+        className={`fixed left-1/2 -translate-x-1/2 z-40 w-[90%] transition-all  duration-500 lg:w-[80%] bg-white/90 backdrop-blur-lg border border-white/30 rounded-lg shadow-md flex justify-between items-center px-6 text-[#1A334E] font-semibold  ${isMobile ? "h-15" : "h-20"} ${showTopbar ? "top-16" : "top-4"}`}
       >
         {/* LEFT MENU */}
         <div className="hidden lg:flex items-center gap-6 text-[#ffffff]">
           <Link
             to="/"
-            className="hover:text-[#0f1b2b] transition-all font-medium"
+            className="text-[#011831] transition-all font-medium"
           >
             Home
           </Link>
 
           <div className="relative group">
-            <span className="cursor-pointer hover:text-[#0f1b2b] transition-all font-medium">
+            <span className="cursor-pointer text-[#011831] transition-all font-medium">
               Services+
             </span>
             <div className="absolute left-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -134,13 +122,13 @@ const Navbar = () => {
 
           <Link
             to="/about"
-            className="hover:text-[#0f1b2b] transition-all font-medium"
+            className="text-[#011831] transition-all font-medium"
           >
             About Us
           </Link>
           <Link
             to="/contact"
-            className="hover:text-[#0f1b2b] transition-all font-medium"
+            className="text-[#011831] transition-all font-medium"
           >
             Contact Us
           </Link>
@@ -156,7 +144,7 @@ const Navbar = () => {
         </div>
 
         {/* RIGHT CONTACT */}
-        <div className="hidden lg:flex items-center gap-5 text-[#ffffff] font-medium">
+        <div className="hidden lg:flex items-center gap-5 text-[#011831] font-medium">
           <span>+91 9467842122</span>
           <HiPhone size={22} className="cursor-pointer" />
           <HiSearch
