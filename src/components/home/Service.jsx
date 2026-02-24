@@ -9,7 +9,9 @@ const cardAnimation = {
 
 const Service = () => {
   return (
-    <div className="w-full relative py-20 flex flex-col items-end pr-3 md:pr-10">
+    <div className="w-full bg-[#022346] relative py-20 flex flex-col items-end pr-3 md:pr-10">
+      <div className="absolute inset-0 bg-black/30"></div>
+
       <motion.div
         initial={{ x: 200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -20,7 +22,7 @@ const Service = () => {
           h-32 sm:h-40 md:h-38 xl:h-55
           border-t border-l border-b border-gray-300/40
           rounded-l-xl backdrop-blur-sm
-          -mt-8 sm:-mt-10 md:-mt-20 xl:-mt-15
+          -mt-2 sm:-mt-10 md:-mt-20 xl:-mt-15
           shadow-[-35px_15px_50px_rgba(0,0,0,0.45)]
         "
       ></motion.div>
@@ -62,7 +64,7 @@ const Service = () => {
             </h3>
 
             <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Gd Ship Management Marine Services provides commercial management solutions for a wide array of vessels, with services including...            </p>
+              Gd Ship Management delivers commercial management solutions across diverse vessel types, including…</p>
             <button className="mt-1 text-[13px] sm:text-sm font-medium text-blue-700 hover:underline">
               Read More →
             </button>
@@ -90,7 +92,7 @@ const Service = () => {
             </h3>
 
             <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Our Technical Management include maintenance and repair, inspection, testing and calibration, as well as....</p>
+              Our technical management covers maintenance, repairs, inspections, testing, and calibration…</p>
 
             <button className="mt-3 text-[13px] sm:text-sm font-medium text-white hover:underline">
               Read More →
@@ -120,9 +122,9 @@ const Service = () => {
             </h3>
 
             <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              About Gd Ship Management Services provides crew management services to help our clients be more efficient and effective in their operations.            </p>
+             We provide comprehensive crew management to enhance operational efficiency and performance.</p>
 
-            <button className=" text-[12px] sm:text-sm font-medium text-gray-900 hover:underline relative left-30 md:left-60">
+            <button className=" text-[12px] sm:text-sm font-medium text-gray-900 hover:underline relative left-30 md:left-0">
               Read More →
             </button>
           </motion.div>
@@ -149,7 +151,7 @@ const Service = () => {
             </h3>
 
             <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Consultancy team is comprised of experienced and highly accomplished professionals with many years...            </p>
+              Our consultancy team consists of seasoned professionals with decades of industry expertise…</p>
 
             <button className="mt-1 text-[13px] sm:text-sm font-medium text-gray-900 hover:underline">
               Read More →

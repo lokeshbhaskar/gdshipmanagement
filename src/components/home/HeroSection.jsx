@@ -85,7 +85,7 @@ const HeroSection = () => {
         {/* RIGHT SIDE (2/3 WIDTH) */}
         <div className="w-full lg:w-2/3 flex justify-center lg:justify-end">
           <div className="relative w-full aspect-video overflow-hidden rounded-3xl shadow-[0_30px_70px_rgba(0,0,0,0.6)]
-                          mb-6 sm:mb-8 md:mb-10 lg:mb-0">
+                          mb-20 sm:mb-8 md:mb-10 lg:mb-0">
 
             {/* Slides */}
             <div

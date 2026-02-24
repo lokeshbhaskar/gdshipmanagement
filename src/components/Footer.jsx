@@ -9,7 +9,7 @@ import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="-mt-20 w-full bg-[#1A1D2B] text-gray-300 pt-16 pb-8 px-6 md:px-16 lg:px-20">
+    <footer className="-mt-20 w-full bg-[#1A1D2B] text-gray-300 pt-26 pb-8 px-6 md:px-16 lg:px-20">
       {/* Top Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-white/10">
         {/* About Section */}
