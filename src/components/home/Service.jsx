@@ -1,168 +1,65 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-
-const cardAnimation = {
-  initial: { opacity: 0, y: 60, scale: 0.9 },
-  whileInView: { opacity: 1, y: 0, scale: 1 },
-  transition: { type: "spring", stiffness: 80, damping: 12 },
-};
+import React from "react";
+import ship1 from "/commercial.jpg";
+import ship2 from "/technical.jpg";
+import ship3 from "/crewpage.jpg";
 
 const Service = () => {
   return (
-    <div className="w-full bg-[#022346] relative py-20 flex flex-col items-end pr-3 md:pr-10">
-      <div className="absolute inset-0 bg-black/30"></div>
 
-      <motion.div
-        initial={{ x: 200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 60, damping: 15 }}
-        viewport={{ once: false, amount: 0.3 }}
-        className="
-          w-[90%] sm:w-[85%] md:w-[65%] xl:w-[55%]
-          h-32 sm:h-40 md:h-38 xl:h-55
-          border-t border-l border-b border-gray-300/40
-          rounded-l-xl backdrop-blur-sm
-          -mt-2 sm:-mt-10 md:-mt-20 xl:-mt-15
-          shadow-[-35px_15px_50px_rgba(0,0,0,0.45)]
-        "
-      ></motion.div>
-      <div
-        className="
-          absolute top-0 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 text-center md:text-left">
-        <h1 className="text-4xl sm:text-6xl md:text-8xl xl:text-[14rem] text-gray-400 leading-none">
-          Our Services
-        </h1>
-        <h2 className="text-md sm:text-xl md:text-3xl font-semibold text-gray-700">
-          Provides A Reliable Services
-        </h2>
-      </div>
-      <div className="hidden  md:grid grid-cols-2 md:grid-cols-4 gap-4 p-4 max-w-300 mx-auto">
-        <div className="h-40 shadow-md border border-gray-700 rounded-2xl"></div>
-        <div className="h-65 shadow-md border border-gray-700 rounded-2xl"></div>
-        <div className="h-30 shadow-md border border-gray-700 rounded-2xl"></div>
-        <div className="h-45 shadow-md border border-gray-700 rounded-2xl"></div>
-      </div>
-      <div className="p-5 md:p-13 space-y-20 space-x-5 w-full lg:flex">
-        <div className="relative min-h-90 md:min-h-105 w-full">
-          <div
-            className="
-              absolute top-10 md:top-0 left-0 
-              w-[80%] md:w-[55%] 
-              h-auto
-              bg-gray-200 
-              rounded-2xl shadow-xl border border-gray-200 p-4
-            "
-          >
-            <img
-              src="/commercial.jpg"
-              alt="service"
-              className="w-full h-20 md:h-28 object-cover rounded-xl mb-3 shadow"
-            />
-
-            <h3 className="text-[12px] sm:text-xl font-semibold text-gray-800">
-              COMMERCIAL MANAGEMENT
+    <div className="w-full relative py-0 flex flex-col items-end pr-3 md:pr-10">
+      <div className="w-[90%] sm:w-[85%] md:w-[65%] xl:w-[55%] h-32 sm:h-40 md:h-38 xl:h-55 border-t border-l border-b border-gray-300/40 rounded-l-xl backdrop-blur-sm -mt-8 sm:-mt-10 md:mt-5 xl:-mt-15 shadow-[-35px_15px_50px_rgba(0,0,0,0.45)] " ></div>
+      <div className="absolute top-12 md:top-4 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 text-center md:text-left"> <h1 className="text-4xl sm:text-6xl md:text-8xl xl:text-[14rem] text-gray-400 leading-none"> Our Services </h1> <h2 className="text-md sm:text-xl md:text-3xl font-semibold text-gray-700 mt-2"> Provides A Reliable Services </h2> </div>
+      <div className="p-5 md:p-13 space-y-10 w-full mt-20"> <div className="grid md:grid-cols-3 gap-8">
+        <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+          <img
+            src={ship1}
+            alt="Commercial Management"
+            className="w-full h-60 object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="p-6">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Commercial Management
             </h3>
-
-            <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Gd Ship Management delivers commercial management solutions across diverse vessel types, including…</p>
-            <button className="mt-1 text-[13px] sm:text-sm font-medium text-blue-700 hover:underline">
-              Read More →
-            </button>
+            <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+              Gd Ship Management Marine Services provides commercial management solutions for a wide array of vessels.
+            </p>
           </div>
-          <motion.div
-            {...cardAnimation}
-            viewport={{ amount: 0.2 }}
-            className="
-              absolute -bottom-28 md:bottom-0  right-0 
-              w-[85%] md:w-[60%] 
-              h-auto  
-              bg-[#BB431D]
-              rounded-2xl shadow-xl border border-gray-200 p-4
-              translate-y-22 translate-x-7
-            "
-          >
-            <img
-              src="/technical.jpg"
-              alt="service"
-              className="w-full h-24 md:h-32 object-cover rounded-xl mb-3 shadow"
-            />
-
-            <h3 className="text-[14px] sm:text-xl font-semibold text-gray-800">
-              TECHNICAL MANAGEMENT
-            </h3>
-
-            <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Our technical management covers maintenance, repairs, inspections, testing, and calibration…</p>
-
-            <button className="mt-3 text-[13px] sm:text-sm font-medium text-white hover:underline">
-              Read More →
-            </button>
-          </motion.div>
         </div>
-        <div className="relative min-h-90 md:min-h-105 w-full">
-          <motion.div
-            {...cardAnimation}
-            viewport={{ amount: 0.2 }}
-            className="
-              absolute top-28  md:top-0 right-0 
-              w-[78%] md:w-[55%] 
-              h-auto 
-              bg-[#9AE600] 
-              rounded-2xl shadow-xl border border-gray-200 p-3
-            "
-          >
-            <img
-              src="/crew.jpg"
-              alt="service"
-              className="w-full h-20 md:h-28 object-cover rounded-xl mb-3 shadow"
-            />
 
-            <h3 className="text-[14px] sm:text-xl font-semibold text-gray-800">
-              CREW MANAGEMENT
+        <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+          <img
+            src={ship2}
+            alt="Technical Management"
+            className="w-full h-60 object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="p-6">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Technical Management
             </h3>
+            <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+              Our technical management includes maintenance, inspection, testing, calibration, and operational support.
+            </p>
+          </div>
+        </div>
 
-            <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-             We provide comprehensive crew management to enhance operational efficiency and performance.</p>
-
-            <button className=" text-[12px] sm:text-sm font-medium text-gray-900 hover:underline relative left-30 md:left-0">
-              Read More →
-            </button>
-          </motion.div>
-          <motion.div
-            {...cardAnimation}
-            viewport={{ amount: 0.2 }}
-            className="
-              absolute -bottom-40 md:bottom-0 left-0 
-              w-[85%] md:w-[60%] 
-              h-auto 
-              bg-[#46EDD5] 
-              rounded-2xl shadow-xl border border-gray-200 p-3
-              translate-y-24 md:translate-y-22 -translate-x-4 lg:translate-x-20
-            "
-          >
-            <img
-              src="/CONSULTANCY.jpg"
-              alt="service"
-              className="w-full h-24 md:h-32 object-cover rounded-xl mb-3 shadow"
-            />
-
-            <h3 className="text-[17px] sm:text-xl font-semibold text-gray-800">
-              Consultancy Service
+        <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+          <img
+            src={ship3}
+            alt="Crew Management"
+            className="w-full h-60 object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="p-6">
+            <h3 className="text-xl font-semibold text-gray-800">
+              Crew Management
             </h3>
-
-            <p className="text-gray-700 text-[13px] sm:text-sm mt-1 leading-snug">
-              Our consultancy team consists of seasoned professionals with decades of industry expertise…</p>
-
-            <button className="mt-1 text-[13px] sm:text-sm font-medium text-gray-900 hover:underline">
-              Read More →
-            </button>
-          </motion.div>
-
+            <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+              Professional crew management services ensuring efficient operations and qualified maritime personnel.
+            </p>
+          </div>
         </div>
 
       </div>
-    </div>
-  )
-}
+      </div> </div>);
+};
 
 export default Service
