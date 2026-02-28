@@ -1,120 +1,91 @@
 import React from "react";
-import Pagesbutton from "../components/Pagesbutton";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Technical = () => {
+  const pillars = [
+    "Planned maintenance and class compliance management",
+    "Inspections, calibration, and technical audits",
+    "Lifecycle cost control with reliability tracking",
+    "Data-backed maintenance planning and execution",
+  ];
+
   return (
-    <div className="w-full min-h-screen bg-white">
-
-      <div
-        className="relative w-full h-[80vh] overflow-hidden flex items-center"
-        style={{
-          clipPath:
-            "polygon(0 0, 100% 0, 100% 80%, 75% 70%, 50% 78%, 25% 65%, 0 75%)",
-        }}
-      >
-        {/* BACKGROUND IMAGE */}
+    <section className="w-full bg-[#061B33] px-4 pb-14 pt-40 sm:px-6 md:px-10 md:pt-44">
+      <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-3xl border border-[#4B7396]/70 shadow-[0_28px_90px_rgba(2,10,22,0.58)]">
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/Technicalpage.jpg')" }}
-        />
-
-        {/* LARGE GRAY EDGE TEXT (NOT DARK) */}
-        <h1
-          className="
-            absolute bottom-0 top-0 lg:-right-40
-            text-gray-700/80
-            text-[6rem] md:text-[11rem] lg:text-[14rem] 
-            font-extrabold 
-            select-none 
-            z-0
-          "
-          style={{ transform: "translate(20%, 20%)" }}
+          className="relative bg-cover bg-center"
+          style={{ backgroundImage: "url('/technical.jpg')" }}
         >
-          Technical
-        </h1>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#021224]/95 via-[#022235]/82 to-[#0a4158]/56" />
+          <div className="relative z-10 px-5 py-12 sm:px-8 md:px-12 md:py-16">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-[#BFD6EB]">
+              Services / Technical
+            </p>
+            <h1 className="font-serif text-3xl font-semibold leading-tight text-[#F4F9FF] sm:text-5xl md:text-6xl">
+              Technical Management
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[#C5D8EA] sm:text-base md:text-lg">
+              We manage vessel technical performance with planned maintenance,
+              compliance controls, and practical engineering support that
+              protects uptime and asset value.
+            </p>
 
-        {/* HERO CONTENT CENTERED LEFT */}
-        <div className="relative z-20 w-full flex flex-col gap-2 md:gap-4 px-5 md:px-10 bottom-15 md:bottom-20 lg:bottom-5">
-          {/* MAIN HEADING */}
-          <h1 className="text-white text-2xl md:text-5xl font-semibold ">
-            Technical Management
-          </h1>
-
-          {/* SUB TEXT */}
-          <p className="text-white/90 text-sm md:text-xl lg:text-xl max-w-2xl drop-shadow-lg">
-            Delivering industry-leading Technical expertise and
-            and strategic project alignment.
-          </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                to="/"
+                className="rounded-full border border-[#7FA4C9] bg-[#0B2D50]/70 px-4 py-2 text-xs font-semibold tracking-wide text-[#E5F0FB] transition hover:border-[#E3B160] hover:text-[#FFD38D]"
+              >
+                Home
+              </Link>
+              <span className="rounded-full bg-[#59A0B7] px-4 py-2 text-xs font-semibold tracking-wide text-[#03283A]">
+                Technical Management
+              </span>
+            </div>
+          </div>
         </div>
 
-        {/* BUTTON PLACED IN PERFECT POSITION */}
-        <div className="absolute left-40 md:left-140 lg:left-200 xl:left-300  bottom-45 md:bottom-60 xl:bottom-75  h-10 w-10">
-          <Pagesbutton first="Services" second="Technical" />
-        </div>
-
-      </div>
-
-      {/* ------------------------------------------------------------
-          NEW CONTENT SECTION (transparent water-glass container)
-      ------------------------------------------------------------- */}
-      <div className="w-full flex justify-center md:px-5">
-        <div
-          className="
-            max-w-5xl w-full 
-            bg-white/10 
-            backdrop-blur-xl 
-            rounded-3xl 
-            border border-white/30 
-            p-8 lg:p-10 
-            shadow-2xl 
-            animate-float 
-            relative bottom-25 
-          "
-          style={{
-            boxShadow:
-              "0 0 25px rgba(255,255,255,0.4), inset 0 0 25px rgba(255,255,255,0.3)",
-          }}
-        >
-
-
-          <h2 className="text-3xl md:text-5xl xl:text-6xl font-semibold text-gray-700 mb-4">
-            Our Technical Expertise
-          </h2>
-
-          <div className="flex flex-col gap-10">
-            <p className="text-gray-700 md:text-lg leading-relaxed">
-              Our Technical Management include maintenance and repair, inspection, testing and calibration, as well as consultancy services. With years of experience in the maritime industry, we have developed a deep understanding of the technical challenges .</p>
-            <p> Technical Management ensures that all vessels are well maintained and operate at peak performance at all times. All maintenance on the machinery is logged down electronically which assists in a planned way to carry out the maintenance.  </p>
+        <div className="grid gap-6 bg-[#082644] px-5 py-8 sm:px-8 md:grid-cols-[1.2fr_0.8fr] md:px-12 md:py-10">
+          <div className="rounded-2xl border border-[#4A6D90] bg-[#0B2D4F]/80 p-5 sm:p-6">
+            <h2 className="text-2xl font-semibold text-[#E5EFF8] sm:text-3xl">
+              Our Technical Expertise
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-[#BFD3E6] sm:text-base">
+              Our technical team oversees maintenance planning, inspection
+              processes, and performance monitoring to ensure vessels operate at
+              safe and efficient standards.
+            </p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {pillars.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-xl border border-[#56799D] bg-[#0D3257] px-4 py-3 text-sm text-[#D8E8F7]"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
 
-
+          <div className="rounded-2xl border border-[#4A6D90] bg-[#0B2D4F]/80 p-5 sm:p-6">
+            <h3 className="text-xl font-semibold text-[#E5EFF8]">
+              Require Technical Supervision?
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-[#BFD3E6]">
+              Let us structure your maintenance program and technical controls
+              for stronger reliability and compliance.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#59A0B7] px-5 py-3 text-sm font-semibold text-[#052539] transition hover:bg-[#74b6cb]"
+            >
+              Get Technical Support
+              <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </div>
-
-      {/* FLOAT ANIMATION */}
-      <style>
-        {`
-          @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-          }
-          .animate-float {
-            animation: float 6s ease-in-out infinite;
-          }
-
-          @keyframes pulseSlow {
-            0% { opacity: 0.2; }
-            50% { opacity: 0.5; }
-            100% { opacity: 0.2; }
-          }
-          .animate-pulseSlow {
-            animation: pulseSlow 3s ease-in-out infinite;
-          }
-        `}
-      </style>
-
-    </div>
+    </section>
   );
 };
 

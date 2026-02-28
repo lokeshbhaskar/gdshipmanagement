@@ -7,10 +7,26 @@ import Searchbar from "./Searchbar";
 import Dropdown from "./Dropdown";
 
 const services = [
-  "Commercial Management",
-  "Technical Management",
-  "Crew Management",
-  "Consultancy Services",
+  {
+    label: "Commercial Management",
+    to: "/commercial-management",
+    tone: "text-[#0D3E6B]",
+  },
+  {
+    label: "Technical Management",
+    to: "/technical-management",
+    tone: "text-[#0B4E63]",
+  },
+  {
+    label: "Crew Management",
+    to: "/crew-management",
+    tone: "text-[#215C47]",
+  },
+  {
+    label: "Consultancy Services",
+    to: "/consultancy-services",
+    tone: "text-[#6A4A13]",
+  },
 ];
 
 const Navbar = () => {
@@ -44,12 +60,10 @@ const Navbar = () => {
     };
   }, []);
 
-  // Hide topbar on scroll down, show on scroll up (desktop only)
   useEffect(() => {
     let lastScroll = 0;
 
     const handleScroll = () => {
-      // Only run on desktop
       if (window.innerWidth < 768) return;
 
       const current = window.scrollY;
@@ -63,7 +77,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* TOPBAR */}
       <div
         className={`fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-sm text-white text-sm transition-transform duration-500
           ${showTopbar ? "translate-y-0" : "-translate-y-full"}`}
@@ -98,11 +111,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MAIN NAVBAR */}
       <div
         className={`fixed left-1/2 -translate-x-1/2 z-40 w-[90%] transition-all  duration-500 lg:w-[80%] bg-white/90 backdrop-blur-lg border border-white/30 rounded-lg shadow-md flex justify-between items-center px-6 text-[#1A334E] font-semibold  ${isMobile ? "h-15" : "h-20"} ${showTopbar ? "top-16" : "top-4"}`}
       >
-        {/* LEFT MENU */}
         <div className="hidden lg:flex items-center gap-6 text-[#ffffff]">
           <Link
             to="/"
@@ -134,7 +145,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* LOGO */}
         <div className="flex items-center pb-2 h-full">
           <img
             src="/GD LOGO.png"
@@ -143,7 +153,6 @@ const Navbar = () => {
           />
         </div>
 
-        {/* RIGHT CONTACT */}
         <div className="hidden lg:flex items-center gap-5 text-[#011831] font-medium">
           <span>+91 9467842122</span>
           <HiPhone size={22} className="cursor-pointer" />
@@ -154,7 +163,6 @@ const Navbar = () => {
           />
         </div>
 
-        {/* MOBILE MENU ICON */}
         <div className="lg:hidden flex items-center gap-3 text-[#1A334E]">
           <HiSearch
             size={22}
@@ -169,13 +177,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* SEARCH BAR */}
       <Searchbar
         showSearchBar={showSearchBar}
         setShowSearchBar={setShowSearchBar}
       />
 
-      {/* MOBILE MENU */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-xl z-50 flex flex-col items-center justify-center space-y-6 text-white text-xl">
           <button
@@ -192,20 +198,19 @@ const Navbar = () => {
             Home
           </Link>
 
-          {/* Mobile Services */}
           <div className="flex flex-col items-center">
             <span className="hover:text-[#79936d] cursor-pointer">
               Services+
             </span>
-            <div className="flex flex-col mt-2 space-y-2 text-sm text-white/90">
+            <div className="mt-3 flex w-full max-w-xs flex-col gap-2 text-sm">
               {services.map((item) => (
                 <Link
-                  key={item}
-                  to={`/${item.toLowerCase().replace(/ /g, "-")}`}
-                  className="hover:text-[#79936d]"
+                  key={item.label}
+                  to={item.to}
+                  className="rounded-lg border border-white/20 bg-white/8 px-4 py-2.5 text-center font-medium tracking-wide text-white/95 transition hover:border-[#E3B160] hover:bg-[#0D2F52]/65 hover:text-[#F8C778]"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item}
+                  {item.label}
                 </Link>
               ))}
             </div>

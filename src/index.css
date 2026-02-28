@@ -4,13 +4,13 @@
   position: relative;
   border-radius: 16px;
 
-  background: rgba(255, 255, 255, 0.08); /* light transparent */
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
 
   box-shadow:
-    inset 0 0 25px rgba(255, 140, 50, 0.35),   /* orange blur inside */
-    inset 0 0 45px rgba(255, 140, 50, 0.15),   /* wider soft glow */
-    inset 0 0 12px rgba(255, 255, 255, 0.25);  /* white soft shine */
+    inset 0 0 25px rgba(255, 140, 50, 0.35),
+    inset 0 0 45px rgba(255, 140, 50, 0.15),
+    inset 0 0 12px rgba(255, 255, 255, 0.25);
   
   border: 1px solid rgba(255, 255, 255, 0.28);
 }

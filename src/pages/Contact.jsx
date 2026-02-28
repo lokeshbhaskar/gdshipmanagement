@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import ContactComponent from "../components/ContactComponent";
 
 const Contact = () => {
+  const MotionDiv = motion.div;
   const [text, setText] = useState("");
   const fullText = "Let's stay in touch →";
 
-  // TYPEWRITER EFFECT
   useEffect(() => {
     let idx = 0;
     const interval = setInterval(() => {
@@ -23,87 +23,64 @@ const contactRef = useRef(null);
 
   return (
     <>
-      <div className="w-full min-h-screen bg-[#1A334E] overflow-hidden relative">
+      <div className="relative w-full overflow-hidden bg-[#061B33] px-4 pb-14 pt-40 sm:px-6 md:px-10 md:pt-44">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(43,118,196,0.25),transparent_32%),radial-gradient(circle_at_88%_10%,rgba(226,177,95,0.18),transparent_30%)]" />
 
-        {/* CONTACT BUTTON (MOVED LOWER) */}
-        <button
-        onClick={scrollToContact}
-          className="
-            absolute 
-            top-[65vh] 
-            md:top-[80vh]   
-            right-6 
-            px-4 py-2 md:py-4
-            text-xs sm:text-sm 
-            border border-black rounded-full 
-            hover:bg-black hover:text-white 
-            transition cursor-pointer
-          "
-        >
-          CONTACT US
-        </button>
+        <div className="relative mx-auto min-h-[72vh] max-w-7xl overflow-hidden rounded-3xl border border-[#4E769B]/70 shadow-[0_24px_70px_rgba(2,10,22,0.58)]">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#031427]/92 via-[#08233f]/82 to-[#0a3258]/58" />
 
-        {/* TOP WHITE CONTAINER */}
-        <div
-          className="
-            absolute top-20 right-0 
-            w-[85%] sm:w-1/2 
-            h-[28vh] sm:h-[40vh] 
-            bg-[#e5e4db] 
-            flex flex-col justify-center 
-            px-6 sm:px-10 
-            z-30
-          "
-        >
-          <p className="text-sm sm:text-base leading-relaxed mb-4 mt-4">
-            Follow us on social media for exclusive updates, behind-the-scenes
-            features, and more.
-          </p>
-
-          <div className="flex gap-4 sm:gap-6 text-sm sm:text-lg font-medium">
-            <a href="#" className="hover:underline">Facebook</a>
-            <a href="#" className="hover:underline">Instagram</a>
-          </div>
-        </div>
-
-        {/* SLIDE-IN IMAGE */}
-        <motion.div
-          initial={{ y: "-100%", opacity: 0 }}
-          animate={{ y: text === fullText ? 0 : "-100%", opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="
-            absolute top-0 right-0 
-            w-[90%] sm:w-[70%] 
-            h-[45vh] sm:h-[65vh] 
-            z-20 overflow-hidden
-            clip-path-[polygon(30%_0%,100%_0%,100%_100%,0%_100%,0%_30%)]
-          "
-        >
-          <img
-            src="/ship1.png"
-            alt="contact visual"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-
-        {/* TYPEWRITER HEADING */}
-        <div className="absolute top-[55vh] md:top-[65vh] sm:top-48 left-6 sm:left-12 ">
-          <h1
-            className="
-              text-[36px] sm:text-[65px] md:text-[90px] xl:text-[110px] lg:mt-5
-              leading-tight font-serif text-white drop-shadow
-            "
+          <button
+            onClick={scrollToContact}
+            className="absolute bottom-5 right-5 z-40 rounded-full bg-[#E3B160] px-5 py-2 text-xs font-semibold tracking-wide text-[#08233F] transition hover:bg-[#f1c578] sm:bottom-8 sm:right-8 sm:text-sm"
           >
-            {text}
-          </h1>
-        </div>
+            CONTACT US
+          </button>
 
-        {/* BOTTOM SECTION */}
-        <div className="relative z-2 px-6 sm:px-12 pb-20 pt-10 w-full max-w-3xl mt-[50vh] sm:mt-[20vh] text-[#2f2f2f]">
+          <div className="absolute right-0 top-4 z-30 w-[88%] rounded-l-2xl border border-[#adc6db] bg-[#f0f4f8] px-5 py-5 sm:top-6 sm:w-[58%] sm:px-8 md:top-8 md:py-7">
+            <p className="mb-3 text-sm leading-relaxed text-[#1D3652] sm:text-base">
+              Follow us for maritime updates, behind-the-scenes operations, and
+              service insights from our team.
+            </p>
+
+            <div className="flex gap-4 text-sm font-semibold sm:gap-6 sm:text-base">
+              <a href="#" className="text-[#0C2F52] hover:underline">
+                Facebook
+              </a>
+              <a href="#" className="text-[#0C2F52] hover:underline">
+                Instagram
+              </a>
+            </div>
+          </div>
+
+          <MotionDiv
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: text === fullText ? 0 : "-100%", opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="absolute right-0 top-0 z-20 h-[58%] w-[94%] overflow-hidden rounded-bl-[34px] sm:h-[66%] sm:w-[70%]"
+          >
+            <img
+              src="/ship1.png"
+              alt="contact visual"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#031427]/70 via-transparent to-transparent" />
+          </MotionDiv>
+
+          <div className="absolute left-4 top-[57%] z-30 sm:left-8 sm:top-[62%] md:left-10 md:top-[66%]">
+            <h1 className="font-serif text-3xl leading-tight text-[#F3F8FD] drop-shadow sm:text-5xl md:text-7xl xl:text-8xl">
+              {text}
+            </h1>
+            <p className="mt-3 max-w-xl text-xs leading-relaxed text-[#C8DBEC] sm:text-sm md:text-base">
+              Reach our team for commercial, technical, crew, or consultancy
+              requirements and we will get back with the right support path.
+            </p>
+          </div>
+
+          <div className="relative z-10 mt-[62vh] w-full max-w-3xl px-6 pb-8 pt-6 text-[#d6e6f4] sm:mt-[55vh] sm:px-10 md:mt-[52vh]" />
         </div>
       </div>
 
-      <ContactComponent ref={contactRef}/>
+      <ContactComponent ref={contactRef} />
     </>
   );
 };

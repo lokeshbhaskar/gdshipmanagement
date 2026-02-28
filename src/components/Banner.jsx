@@ -1,56 +1,52 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Anchor, ArrowRight, PhoneCall } from "lucide-react";
 
 const Banner = () => {
-    const navigate = useNavigate();
-    return (
-        <div className="relative bottom-20">
+  return (
+    <section className="relative w-full overflow-hidden py-14 md:py-20">
+      <div className="absolute inset-0 bg-[#061c36]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(42,118,196,0.26),transparent_30%),radial-gradient(circle_at_90%_20%,rgba(242,177,74,0.22),transparent_34%)]" />
 
-            <h1 className="mt-15  text-[#1A334E] text-center text-xl md:text-5xl lg:text-6xl xl:text-8xl font-semibold">
-                GET IN TOUCH WITH US ANYTIME
-            </h1>
+      <div
+        className="relative mx-auto flex w-[92%] max-w-6xl flex-col overflow-hidden rounded-3xl border border-[#5d7fa3]/40 bg-cover bg-center shadow-[0_30px_80px_rgba(2,10,22,0.55)]"
+        style={{ backgroundImage: "url('/banner.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#021224]/94 via-[#021224]/75 to-[#07203a]/55" />
+        <div className="relative z-10 px-6 py-10 sm:px-10 md:px-12 md:py-14 lg:w-[75%]">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#7ea2c7]/50 bg-[#0d2e52]/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#C7DDF2]">
+            <Anchor size={14} />
+            Trusted Ship Partner
+          </p>
 
-            {/* Masked Background Image Section */}
-            <div
-                className="
-          relative mt-6
-          bg-center bg-cover bg-no-repeat
-          p-10 space-y-5
-          md:grid grid-cols-1 lg:grid-cols-2
-          mask-image-to-radial
-        "
-                style={{
-                    backgroundImage: "url('/banner.jpg')",
-                }}
+          <h2 className="font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl">
+            Keep Your Fleet Efficient, Compliant, and Ready for Every Voyage
+          </h2>
+
+          <p className="mt-5 max-w-3xl text-sm leading-relaxed text-[#d4e4f4] sm:text-base md:text-lg">
+            GD Ship Management delivers commercial, technical, and crew support designed to reduce downtime and improve vessel performance with consistent operational discipline.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-[#E3B160] px-6 py-3 text-sm font-semibold text-[#07203b] transition hover:bg-[#f2c476] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f2c476]"
             >
-                <h2 className="text-[#ffffff] md:text-3xl font-semibold lg:p-10">
-                    Marine Services Are Often Considered
-                </h2>
-
-                {/* contact us buton */}
-                <p className="font-serif text-sm md:text-xl text-white">
-                    A genuine strategic partner is GD SHIP MANAGEMENT Pvt Ltd. You can
-                    get the full range of end-to-end solutions you need to run your business
-                    effectively and efficiently through our global network. Investigate our
-                    administration proposing to find more.
-                </p>
-
-                <div className="mt-20 cursor-pointer w-45 h-12 xl:w-50 xl:h-16 relative left-7 bottom-10 md:left-60 lg:left-85 xl:left-180 flex items-center justify-center z-20">
-                    <div className="absolute left-0 w-1/2 h-full border-5 border-t border-b border-[#1c4905]" />
-                    <div className="absolute right-0 w-1/2 h-full bg-[#1c4905] backdrop-blur-md" />
-                    <button
-                    onClick={()=>navigate("/contact")}
-                        className="cursor-pointer
-      absolute font-semibold text-white 
-      tracking-[0.25em] text-lg xl:text-xl
-    "
-                    >
-                        Contact Us
-                    </button>
-                </div>
-            </div>
+              Contact Us
+              <ArrowRight size={16} />
+            </Link>
+            <a
+              href="tel:+919467842122"
+              className="inline-flex items-center gap-2 rounded-full border border-[#8db0d3] bg-[#0b2b4d]/65 px-6 py-3 text-sm font-semibold text-[#dcedfc] transition hover:border-[#E3B160] hover:text-[#E3B160] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f2c476]"
+            >
+              <PhoneCall size={16} />
+              +91 9467842122
+            </a>
+          </div>
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Banner;
