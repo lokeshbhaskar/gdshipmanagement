@@ -50,9 +50,9 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
             custom={0.2}
-            className="text-[#F4EDE8] text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight font-serif drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
+            className="text-[#F4EDE8] text-4xl md:text-4xl lg:text-4xl font-extrabold tracking-tight leading-tight font-serif drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
           >
-            GDSHIP
+            GDSHIP MANAGEMENT PRIVATE LIMITED
           </MotionH1>
 
           <MotionH2
