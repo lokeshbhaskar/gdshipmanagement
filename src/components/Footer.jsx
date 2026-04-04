@@ -125,16 +125,6 @@ const Footer = () => {
                 info@gdshipmanagement.in
               </a>
             </div>
-
-            <div className="flex items-center gap-3 text-sm text-[#B4CBE0]">
-              <FiMail className="text-[#DCEBFA]" />
-              <a
-                href="mailto:info@gdshipmanagement.com"
-                className="rounded px-1 transition hover:text-[#F6BD62] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F6BD62]"
-              >
-                info@gdshipmanagement.com
-              </a>
-            </div>
           </div>
         </div>
 
